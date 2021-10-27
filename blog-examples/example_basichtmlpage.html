@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -7,7 +8,7 @@
 <body>
     <div>
         <h1>
-            Hello World! <i>This</i> is an <b>example</b> page.
+            Hello World! <em>This</em> is an <strong>example</strong> page.
         </h1>
         <br />
         <p>
@@ -20,6 +21,29 @@
             <br />
             <img src="https://via.placeholder.com/150" />
         </p>
+        <br />
+        <table>
+                <tr>
+                        <td>First Item</td>
+                        <td>Second Item</td>
+                </tr>
+                <tr>
+                        <td>Third Item</td>
+                        <td>Forth Item</td>
+                </tr>
+        </table>
+        <br />
+        <ul>
+                <li>Banana</li>
+                <li>Apple</li>
+                <li>Orange</li>
+        </ul>
+        <br />
+        <ol>
+                <li>Linux</li>
+                <li>MacOS</li>
+                <li>Windows</li>
+        </ol>        
     </div>
 </body>
 
@@ -37,6 +61,7 @@
   que atendem boa parte das necessidades do dia a dia. Veja 
   abaixo uma listagem de cada "tag" e o que elas fazem:
 
+  <!DOCTYPE html> Indica ao navegador que estamos lidando com um documento HTML
   <html>  Indica que o documento HTML começa aqui
   <head>  Traz informações que são necessárias ao documento mas que 
           não representam elementos na página renderizada. Podemos 
@@ -51,14 +76,23 @@
           representa uma divisão no documento que possui algum conteúdo que
           deve ser exibido.
   <h1>    É um cabeçalho no documento (header), sendo h1 o maior e h6 o menor.
-  <i>     Deixa o texto em itálico
-  <b>     Deixa o texto negritado (poderia ser <strong> também)
+  <em>    Deixa o texto destacado (geralmente itálico e poderia ser <i> também,
+          mas <em> é melhor para acessibilidade já que pode ser interpretado
+          em softwares para leitura)
+  <strong>Deixa o texto negritado (poderia ser <b> também, mas strong é melhor 
+          para acessibilidade)
   <br />  Pula uma linha: vem de break
   <p>     Um parágrafo
   <span>  É também uma divisão, mas esta ocorre na própria linha. Serve para 
           segmentar o texto.
   <a>     Representa um link
   <img /> Representa uma imagem
+  <ul>    Lista não ordenada (bullet points)
+  <ol>    Lista ordenada (numerada)
+  <li>    Item de lista
+  <table> Tabela
+  <tr>    Linha da tabela
+  <td>    Coluna da tabela
 
   Obviamente há muitos outros elementos que podemos usar em HTML e, principamente
   com o surgimento do HTML5 outras funcionalidades adicionais foram incorporadas 
@@ -78,6 +112,7 @@
   that meet a good part of everyday needs. Below is a listing 
   of each "tag" used and what they do:
 
+  <!DOCTYPE html> Tells the browser we are dealing with an HTML file
   <html>  Indicates that the HTML document starts here
   <head>  Brings information that is needed by the document but that
           do not represent elements on the rendered page. We can
@@ -92,14 +127,23 @@
           in the document that has some content that should be displayed.
   <h1>    It is a header in the document (header), with h1 being the largest 
           and h6 the smallest.
-  <i>     Make text italic
-  <b>     Make the text bold (could be <strong> too)
+  <em>    Makes the text highlighted (usually italics and could be <i> too,
+          but <em> is better for accessibility as it can be interpreted
+          in reading softwares)
+  <strong>Make the text bold (could be <b> too, but strong is better
+          for accessibility)
   <br />  Skip a line
   <p>     One paragraph
   <span>  It is also a division, but this one occurs on the line itself. It 
           segments the text.
   <a>     Represents a link
   <img /> Represents an image
+  <ul> Unordered list (bullet points)
+  <ol> Ordered (numbered) list
+  <li> List Item
+  <table> table
+  <tr> Table row
+  <td> Table column
 
   Obviously there are many other elements that we can use in HTML and especially
   with the emergence of HTML5 in which other additional features were 
