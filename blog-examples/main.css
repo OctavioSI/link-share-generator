@@ -1,0 +1,36 @@
+/* 
+    🇧🇷 | 👉 Alterando um tipo de elemento: todas as tags <h1> serão afetadas
+    🇺🇸 | 👉 Changing an element type: all <h1> tags will be affected
+*/
+
+h1 {
+    color: green;
+}
+
+
+/*
+    🇧🇷 | 👉 Alterando um elemento específico, que deverá ser identificado
+            por um "id" de mesmo nome, como:
+    🇺🇸 | 👉 Changing a specific element, which must be identified by an 
+            "id" of the same name, such as:
+
+            <p id="target-element">Sample text</p>
+*/
+
+#target-element {
+    color: blue;
+}
+
+
+/*
+    🇧🇷 | 👉 Alterando uma classe de elemento, que é identificada no 
+            atributo "class":
+    🇺🇸 | 👉 Changing an element class, which is identified in class"
+            attribute:
+
+            <p class="important-text">This is important</p>
+*/
+
+.important-text {
+    color: red;
+}
