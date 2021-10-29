@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Unusual HTML5 tags and attributes</title>
+    <!-- 
+    🇧🇷 | 👉 As duas tags abaixo fazer referência ao item 3 (base) 
+            da lista. Definindo uma tag <base> no <head> do arquivo
+            conseguimos definir um caminho relativo para os demais 
+            links da página.
+            <base href="https://via.placeholder.com/">
+            <base target="_blank">
+
+    🇺🇸 | 👉 The two tags below refer to item 3 (base)
+            from the list. Defining a <base> tag in the <head> of the file
+            we were able to define a relative path for the others
+            page links. 
+            <base href="https://via.placeholder.com/">
+            <base target="_blank">
+    -->
+    <base href="https://via.placeholder.com/">
+    <base target="_blank">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>🇧🇷 | Tags e atributos HTML5 incomuns</h1>
+    <h1>🇺🇸 | Unusual HTML5 tags and attributes</h1>
+
+    <hr />
+    <h2>1. datalist</h2>
+    <p>🇧🇷 | 👉 Você pode criar uma lista com autocompletar usando a tag "datalist" juntamente com um input com o atributo "list"</p>
+    <p>🇺🇸 | 👉 You can create an auto-complete list using the "datalist" tag along with an input with the "list" attribute</p>
+    <input list="fruit" />
+    <datalist id="fruit">
+        <option value="Banana"></option>
+        <option value="Apple"></option>
+        <option value="Coconut"></option>
+    </datalist>
+
+    <br /><br /><br />
+    <hr />
+
+    <h2>2. download</h2>
+    <p>🇧🇷 | 👉 Para criar um link que faz o download do arquivo ao invés de redirecionar a página, basta colocar um atributo "download"</p>
+    <p>🇺🇸 | 👉 To create a link that downloads the file instead of redirecting the page, just put a "download" attribute</p>
+    <a href="200.png" download="Placeholder (square 200x200).png">Download Link</a>
+
+    <br /><br /><br />
+    <hr />
+
+    <h2>3. base</h2>
+    <p>🇧🇷 | 👉 Usando o "base" que está no "head" conseguimos definir um caminho relativo para os links (e target) da página.</p>
+    <p>🇺🇸 | 👉 Using the "base" that is in the "head" we can define a relative path for the links (and target) of the page.</p>
+    <img src="150.png" />
+    <!-- 
+    🇧🇷 | 👉 Neste caso, como temos o <base> no <head> com o valor: 
+            https://via.placeholder.com/, o nosso endereço pode conter 
+            apenas a porção que vem após esse endereço (que seria, se completo, 
+            https://via.placeholder.com/150.png). O <base> vai definir
+            o endereço padrão para todos os links da página.
+    🇺🇸 | 👉 In this case, as we have the <base> in the <head> with the value:
+            https://via.placeholder.com/, our address may contain
+            just the portion that comes after that address (which would be, if complete,
+            https://via.placeholder.com/150.png). The <base> will define
+            the default address for all links on the page.
+    -->
+
+    <br /><br /><br />
+    <hr />
+
+    <h2>3. dialog</h2>
+    <p>🇧🇷 | 👉 A tag "dialog" cria uma janela no seu código, como se fosse um popup. A janela criada pelo dialog ficará sobreposta à página e você pode usá-la em conjunto com javascript para fazê-la abrir e fechar. Usa-se o atributo "open" para que ela
+        já inicie aberta.</p>
+    <p>🇺🇸 | 👉 The "dialog" tag creates a window in your code, like a popup. The window created by the dialog will be superimposed on the page and you can use it in conjunction with javascript to make it open and close. The "open" attribute is used so
+        that it already starts open.</p>
+    <dialog open>
+        <p>Hello Everyone!</p>
+    </dialog>
+
+    <br /><br /><br />
+    <hr />
+
+    <h2>4. optgroup</h2>
+    <p>🇧🇷 | 👉 Dentro de uma caixa de seleção (select) você pode agrupar opções dentro de subgrupos utilizando a tag "optgroup".</p>
+    <p>🇺🇸 | 👉 Within a select box you can group options into subgroups using the "optgroup" tag.</p>
+    <select>
+        <optgroup label="Swedish Cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+        </optgroup>
+        <optgroup label="German Cars">
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+        </optgroup>
+    </select>
+
+    <br /><br /><br />
+    <hr />
+
+
+    <h2>5. meter</h2>
+    <p>🇧🇷 | 👉 Você pode criar uma barra de progresso diretamente em HTML com a tag "meter". Nessa tag você pode ainda estipular o valor mínimo, máximo e valores altos, baixos e ideais para colorir a barra conforme o valor é alterado.</p>
+    <p>🇺🇸 | 👉 You can create a progress bar directly in HTML with the tag "meter". In this tag you can also stipulate the minimum, maximum and high, low and ideal values to color the bar as the value changes.</p>
+    <label for="value1">Progress</label>
+    <meter id="value1" min="0" max="100" low="25" high="75" optimum="80" value="79"></meter>
+
+    <br /><br /><br />
+    <hr />
+
+    <h2>6. range</h2>
+    <p>🇧🇷 | 👉 Você pode criar uma barra de ajuste de intervalo usando o tipo "range" dentro de um "input", definindo ainda valores mínimo e máximo.</p>
+    <p>🇺🇸 | 👉 You can create a range adjustment bar using the "range" type within an "input", further defining minimum and maximum values.</p>
+    <label for="value2">Volume</label>
+    <input type="range" id="value2" min="0" max="30" />
+
+
+    <br /><br /><br />
+    <hr />
+
+    <h2>6. mark</h2>
+    <p>🇧🇷 | 👉 É possível destacar texto usando a tag "mark".</p>
+    <p>🇺🇸 | 👉 It is possible to highlight text using the "mark" tag.</p>
+    <p>This text is <mark>hightlighted</mark></p>
+
+    <br /><br /><br />
+    <hr />
+
+    <h2>7. search</h2>
+    <p>🇧🇷 | 👉 Você pode tornar um "input" em um campo de busca (com o botão para apagar o conteúdo) apenas usando o tipo "search".</p>
+    <p>🇺🇸 | 👉 You can make an "input" in a search field (with the button to delete the content) just using the "search" type.</p>
+    <label for="value3">Search</label>
+    <input type="search" id="value3" name="search" />
+
+    <br /><br /><br />
+    <hr />
+
+    <h2>8. fieldset</h2>
+    <p>🇧🇷 | 👉 Você pode criar uma "caixa" de destaque para o conteúdo que deseja utilizando o "fieldset", com o rótulo da caixa sendo uma tag "legend" (opcional).</p>
+    <p>🇺🇸 | 👉 You can create a prominent "box" for the content you want using the "fieldset", with the box label being a "legend" tag (optional).</p>
+    <fieldset>
+        <legend>Choose your language</legend>
+        <input type="radio" id="opt1" name="language">
+        <label for="opt1">Javascript</label><br />
+        <input type="radio" id="opt2" name="language">
+        <label for="opt2">Python</label><br />
+        <input type="radio" id="opt3" name="language">
+        <label for="opt3">PHP</label>
+    </fieldset>
+
+    <br /><br /><br />
+    <hr />
+
+    <h2>8. details</h2>
+    <p>🇧🇷 | 👉 A tag "details" permite que você crie um acordião no seu código, um bloco que pode ser ocultado ou exibido. A tag "summary" contém a porção que será sempre exibida e você pode usar o atributo "open" para deixar o bloco visível por padrão.</p>
+    <p>🇺🇸 | 👉 The "details" tag allows you to create an accordion in your code, a block that can be hidden or displayed. The "summary" tag contains the portion that will always be displayed and you can use the "open" attribute to make the block visible
+        by default.</p>
+    <details open>
+        <summary>This will collapse</summary>
+        content collapsing
+    </details>
+
+    <br /><br /><br />
+    <hr />
+
+    <h2>8. figure</h2>
+    <p>🇧🇷 | 👉 A tag "figure" possibilita agrupar todo o seu conteúdo como se fosse um só elemento na página. Ele contém todos os elementos da figura, incluindo a imagem e a legenda, que pode ser incluída pela tag "figcaption". Ele se diferencia do "img"
+        pois o "img" traz apenas a imagem, enquanto o "figure" representa um container com toda a ilustração (imagem e demais elementos que a formem). </p>
+    <p>🇺🇸 | 👉 The "figure" tag makes it possible to group all your content as if it were a single element on the page. It contains all the elements of the figure, including the image and caption, which can be included by the tag "figcaption". It differs
+        from "img" because the "img" brings only the image, while the "figure" represents a container with all the illustration (image and other elements that form it).</p>
+    <figure>
+        <img src="200">
+        <figcaption>Fig 1. Exhibit</figcaption>
+    </figure>
+
+    <br /><br /><br />
+    <hr />
+
+    <h2>9. abbr</h2>
+    <p>🇧🇷 | 👉 A tag "abbr" possibilita que você defina abreviatura para palavras no texto, que ficarão sublinhados com destaque. Você pode usar o atributo "title" para colocar o texto completo da abreviatura ali. </p>
+    <p>🇺🇸 | 👉 The "abbr" tag allows you to define abbreviations for words in the text, which will be underlined prominently. You can use the "title" attribute to put the full text of the abbreviation there.</p>
+
+    <p> You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>. </p>
+
+    <br /><br /><br />
+    <hr />
+
+    <h2>10. dfn</h2>
+    <p>🇧🇷 | 👉 A tag "dfn" indica que a palavra a ser definida, sendo que a tag que a contém apresenta a definição. Isso é muito útil para leitores de texto automáticos e aumenta a acessibilidade do seu site. </p>
+    <p>🇺🇸 | 👉 The tag "dfn" indicates the word to be defined, and the tag containing it presents the definition. This is very useful for automatic text readers and increases your website's accessibility.</p>
+    <p> A <dfn id="def-validator">validator</dfn> is a program that checks for syntax errors in code or documents. </p>
+
+    <br /><br /><br />
+    <hr />
+
+    <h2>11. address</h2>
+    <p>🇧🇷 | 👉 A tag "address" indica os dados de contato do autor do texto ou documento. Também aumenta a acessibilidade. </p>
+    <p>🇺🇸 | 👉 The "address" tag indicates the contact information of the author of the text or document. It also increases accessibility.</p>
+    <p>Contact the author of this page:</p> <address> <a href="https://twitter.com/christo_kade">@christo_kade</a><br> <a href="mailto:christopher@kade.com">christopher@kade.com</a><br> <a href="tel:+13115552368">(311) N0T A NUM8ER</a> </address>
+
+</body>
+
+</html>
