@@ -1,0 +1,14 @@
+body {}
+
+header {
+    height: 250px;
+}
+
+main {
+    height: 100%;
+    border: 1px solid red;
+}
+
+footer {
+    height: 200px;
+}
