@@ -93,7 +93,7 @@
         #inputs tr {
             height: 40px;
             line-height: 40x;
-            display: table-row;
+            display: none;
         }
         
         #inputs tr input {
