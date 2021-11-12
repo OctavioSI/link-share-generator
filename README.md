@@ -3,6 +3,8 @@ Simple link share generator for social media made only with HTML and CSS
 
 ## DEMO
 
+![SLSG---Social-Links-Share-Generator](https://user-images.githubusercontent.com/8326550/141535876-294c5073-0f08-43c0-9d78-e97dd52b4cc4.gif)
+
 You can access the live demo here: https://octaviosi.github.io/link-share-generator/
 
 <br />
