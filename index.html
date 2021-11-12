@@ -6,15 +6,96 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Social Links Generator</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
+    <!-- Adding FontAwesome icons -->
+    <script src="https://kit.fontawesome.com/7f4c616f7d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>Header</header>
-    <nav>Navegação</nav>
-    <main>Conteúdo</main>
-    <footer>Footer</footer>
+    <header>Social Links Share Generator</header>
+    <main>
+        <section id="socials">
+            <h1>STEP 1. Select your social media</h1>
+            <input type="hidden" id="currentselected" value="facebook" />
+            <button class="selected" alt="Facebook" title="Facebook" id="facebook" onclick="fillResult('facebook')">
+                <i class="fa-brands fa-facebook-square"></i>
+            </button>
+            <button alt="Twitter" title="Twitter" id="twitter" onclick="fillResult('twitter')">
+                <i class="fa-brands fa-twitter-square"></i>
+            </button>
+            <button alt="Tumblr" title="Tumblr" id="tumblr" onclick="fillResult('tumblr')">
+                <i class="fa-brands fa-tumblr-square"></i>
+            </button>
+            <button alt="E-mail" title="E-mail" id="email" onclick="fillResult('email')">
+                <i class="fa-solid fa-square-envelope"></i>
+            </button>
+            <button alt="Pinterest" title="Pinterest" id="pinterest" onclick="fillResult('pinterest')">
+                <i class="fa-brands fa-pinterest-square"></i>
+            </button>
+            <button alt="LinkedIn" title="LinkedIn" id="linkedin" onclick="fillResult('linkedin')">
+                <i class="fa-brands fa-linkedin"></i>
+            </button>
+            <button alt="Reddit" title="Reddit" id="reddit" onclick="fillResult('reddit')">
+                <i class="fa-brands fa-reddit-square"></i>
+            </button>
+            <button alt="Xing" title="Xing" id="xing" onclick="fillResult('xing')">
+                <i class="fa-brands fa-xing-square"></i>
+            </button>
+            <button alt="WhatsApp" title="WhatsApp" id="whatsapp" onclick="fillResult('whatsapp')">
+                <i class="fa-brands fa-whatsapp-square"></i>
+            </button>
+            <button alt="Hacker News" title="Hacker News" id="hackernews" onclick="fillResult('hackernews')">
+                <i class="fa-brands fa-hacker-news-square"></i>
+            </button>
+        </section>
+        <section id="inputs">
+            <h1>STEP 2. Setup information</h1>
+            <table>
+                <tr id="input-url-wrapper">
+                    <td>
+                        URL
+                    </td>
+                    <td>
+                        <input type="text" placeholder="https:// ..." id="input-url" />
+                    </td>
+                </tr>
+                <tr id="input-mediaurl-wrapper">
+                    <td>
+                        Media URL (for Pinterest)
+                    </td>
+                    <td>
+                        <input type="text" placeholder="https:// ..." id="input-mediaurl" />
+                    </td>
+                </tr>
+                <tr id="input-title-wrapper">
+                    <td>
+                        Title
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Title" id="input-title" />
+                    </td>
+                </tr>
+                <tr id="input-content-wrapper">
+                    <td>
+                        Content
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Content" id="input-content" />
+                    </td>
+                </tr>
+            </table>
+            <button id="refreshbtn" onclick="refreshText()"><i class="fa-solid fa-rotate"></i>Update Result</button>
+        </section>
+        <section id="outputs">
+            <h1>STEP 3. Profit!</h1>
+            <textarea id="result">Result</textarea>
+            <button id="copybtn" onclick="copyText()"><i class="fa-solid fa-copy"></i>Copy</button>
+        </section>
+    </main>
+    <footer><a href="https://github.com/OctavioSI"><i class="fa-brands fa-github-alt"></i>github.com/OctavioSI</a></footer>
+
 </body>
 
 </html>
