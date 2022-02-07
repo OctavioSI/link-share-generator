@@ -1,23 +1,143 @@
 <!DOCTYPE html>
 <html>
 
+<!--
+  /==========================
+  💬 Comentários ao código
+  👉 🇧🇷 Versão em Português
+  ==========================/
+
+  Este código é um exemplo de como podemos usar HTML, CSS e um pouco de Javascript
+  para montar um projeto simples em poucas linhas de código. Basicamente temos três arquivos
+  principais neste programa: 
+  
+  1️⃣ index.html // Este arquivo HTML que será exibido no navegador
+  2️⃣ main.css // O arquivo de estilo, que nos permite personalizar os elementos HTML
+  3️⃣ main.js // O arquivo que contém os códigos que são executados, em Javascript
+
+  Acompanhe o código abaixo e os comentários que fizermos.
+
+  /==========================
+  💬 Comments to the code
+  👉 🇺🇸 English Version
+  ==========================/
+  
+  This code is an example of how we can use HTML, CSS and some Javascript
+  to assemble a simple project in a few lines of code. Basically we have three main 
+  files in this program:
+  
+  1️⃣ index.html // This HTML file that will be displayed in the browser
+  2️⃣ main.css // The style file, which allows us to customize HTML elements
+  3️⃣ main.js // The file that contains the codes that are executed, in Javascript
+
+  Follow the code below and the comments we make.
+
+-->
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <!--
+    /==========================
+    💬 Comentários ao código
+    👉 🇧🇷 Versão em Português
+    ==========================/
+
+    Na porção que se encontra entre as tags <head> e </head> temos informações que o navegador
+    deverá observar quando "montar" a nossa página. Temos o título da página, arquivos que devem 
+    ser incluídos (como estilos CSS, fontes e scripts), meta-tags que ajudam mecanismos de busca
+    a localizar informações relevantes e afins.
+
+    /==========================
+    💬 Comments to the code
+    👉 🇺🇸 English Version
+    ==========================/
+    
+    In the portion between the <head> and </head> tags we have information that the browser
+    should note when it "assembles" our page. We have the title of the page, files that must
+    be included (such as CSS styles, fonts and scripts), meta tags that help search engines
+    to locate relevant information and so forth.
+
+    -->
     <title>SLSG - Social Links Share Generator</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- 🇧🇷 Adicionando fonte do Google que usaremos | 🇺🇸 Adding used Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- 🇧🇷 Adicionando o nosso arquivo CSS | 🇺🇸 Adding our CSS file -->
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <!-- 🇧🇷 Adicionando o nosso arquivo Javascript | 🇺🇸 Adding our Javascript file -->
     <script src='main.js'></script>
-    <!-- Adding FontAwesome icons -->
+    <!-- 🇧🇷 Adicionando ícones do FontAwesome | 🇺🇸 Adding FontAwesome icons -->
     <script src="https://kit.fontawesome.com/7f4c616f7d.js" crossorigin="anonymous"></script>
 </head>
+
+<!--
+    /==========================
+    💬 Comentários ao código
+    👉 🇧🇷 Versão em Português
+    ==========================/
+
+    Agora temos o <body> do nosso documento, que contém as instruções que o navegador precisa
+    para montar a nossa página. Nosso <body> possui ainda algumas definições HTML5 que delimitam
+    cada porção da nossa página, como o cabeçalho (header), porção principal (main) e rodapé (footer).
+
+    Para que cada seção seja montada corretamente, é necessário definir as suas características
+    por meio do CSS (que é feito no arquivo main.css).
+
+    Você verá ainda que quebramos a nossa seção <main> em algumas <section> para delimitar seções 
+    diferentes no documento. Isso não é absolutamente necessário para montar uma página HTML, mas 
+    utilizar tags específicas aumenta a acessibilidade do programa como um todo.
+
+    /==========================
+    💬 Comments to the code
+    👉 🇺🇸 English Version
+    ==========================/
+    
+    Now we have the <body> of our document, which contains the instructions the browser needs
+    to set up our page. Our <body> has some HTML5 definitions that delimit
+    each portion of our page, such as the header, main portion and footer.
+
+    For each section to be assembled correctly, it is necessary to define its characteristics
+    through CSS (which is done in the main.css file).
+
+    You'll also see that we've broken our <main> section into some <section> to delimit different 
+    sections in the document. This is not absolutely necessary to build an HTML page, but
+    using specific tags increases the accessibility of the program as a whole.
+
+    -->
 
 <body>
     <header>SLSG</header>
     <main>
         <section id="socials">
             <h1>STEP 1. Select your social media</h1>
+            <!--
+                /==========================
+                💬 Comentários ao código
+                👉 🇧🇷 Versão em Português
+                ==========================/
+
+                Nesta seção criamos os botões das redes sociais. Pontos de observação:
+
+                (i)     Colocamos um input "currentselected" do tipo "hidden" que vai guardar o valor
+                        atualmente selecionado. Isso será necessário em nosso arquivo Javascript.
+                
+                (ii)    Cada botão possui um "id" próprio e um atributo "onclick" que diz que uma
+                        função javascript chamada "fillResult" será chamada quando o botão for
+                        clicado. Esta função está no arquivo main.js
+
+                /==========================
+                💬 Comments to the code
+                👉 🇺🇸 English Version
+                ==========================/
+                
+                In this section we create social media buttons. Points to take note of:
+
+                (i)     We've put a "currentselected" input of the "hidden" type that will store
+                        the currently selected value. This will be needed in our Javascript file.
+                
+                (ii)    Each button has its own "id" and an "onclick" attribute that sets that a
+                        javascript function called "fillResult" will be called when the button is
+                        clicked. This function is in the main.js file.
+
+            -->
             <input type="hidden" id="currentselected" value="facebook" />
             <button class="selected" alt="Facebook" title="Facebook" id="facebook" onclick="fillResult('facebook')">
                 <i class="fa-brands fa-facebook-square"></i>
@@ -52,6 +172,30 @@
         </section>
         <section id="inputs">
             <h1>STEP 2. Setup information</h1>
+            <!--
+                /==========================
+                💬 Comentários ao código
+                👉 🇧🇷 Versão em Português
+                ==========================/
+
+                Agora criamos um elemento de tabela com elementos <input>, que irão coletar algumas informações 
+                necessárias para montarmos o link final que queremos.
+
+                Deixamos cada linha da tabela (table row <tr>) com um "id" que serão necessárias em nosso
+                arquivo Javascript.
+
+                /==========================
+                💬 Comments to the code
+                👉 🇺🇸 English Version
+                ==========================/
+                
+                Now we create a table element with <input> elements, which will collect some information
+                needed to build the final link we want.
+
+                We leave each table row (<tr>) with an "id" that will be needed in our
+                Javascript file.
+
+            -->
             <table>
                 <tr id="input-url-wrapper">
                     <td>
@@ -88,6 +232,26 @@
             </table>
             <button id="refreshbtn" onclick="refreshText()"><i class="fa-solid fa-rotate"></i>Update Result</button>
         </section>
+        <!--
+                /==========================
+                💬 Comentários ao código
+                👉 🇧🇷 Versão em Português
+                ==========================/
+
+                E finalmente temos o campo de resultado, em que é gerado o código HTML para o link de 
+                compartilhamento que desejamos. Todas as funções que são executadas ao clicar no elemento 
+                de botão nesta página estão no arquivo main.js
+
+                /==========================
+                💬 Comments to the code
+                👉 🇺🇸 English Version
+                ==========================/
+                
+                And finally we have the result field, where the HTML code for the share link is generated.
+                All functions that are executed when clicking on the button elements on this page
+                are located in the main.js file.
+
+            -->
         <section id="outputs">
             <h1>STEP 3. Profit!</h1>
             <textarea id="result">Result</textarea>

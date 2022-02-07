@@ -1,189 +1,307 @@
-        body {
-            width: 100%;
-            height: 100vh;
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-        }
-        
-        header {
-            height: 80px;
-            line-height: 80px;
-            background-color: #333333;
-            color: #FFFFFF;
-            font-size: 1.5em;
-            font-weight: bold;
-            text-transform: uppercase;
-            padding-left: 16px;
-            padding-right: 16px;
-        }
-        
-        main {
-            min-height: calc(100% - 120px);
-        }
-        
-        main section {
-            padding: 8px;
-        }
-        
-        #socials button {
-            border: 0;
-            background: 0;
-            font-size: 6em;
-            cursor: pointer;
-        }
-        
-        #socials .selected {
-            border: 5px dashed #FFC300;
-            border-radius: 6px;
-            background-color: #FFF3CD;
-        }
-        
-        main section #copybtn,
-        main section #refreshbtn {
-            font-size: 1.5em;
-            width: 100%;
-            color: #FFFFFF;
-            background: green;
-            border: 1px solid green;
-            padding: 6px;
-        }
-        
-        main section #copybtn i,
-        main section #refreshbtn i {
-            margin-right: 5px;
-        }
-        
-        footer {
-            height: 40px;
-            line-height: 40px;
-            padding-left: 8px;
-            padding-right: 8px;
-            background-color: #333333;
-            text-align: end;
-        }
-        
-        footer i {
-            margin-right: 6px;
-        }
-        
-        footer a {
-            text-decoration: none;
-            color: #FFC300;
-        }
-        
-        footer a:hover,
-        footer a:visited {
-            text-decoration: none;
-            color: #FFC300;
-        }
-        
-        #socials h1,
-        #inputs h1,
-        #outputs h1 {
-            padding: 8px;
-            width: calc(100% - 16px);
-            background-color: #333333;
-            color: #FFC300;
-        }
-        
-        #inputs table {
-            width: 100%;
-        }
-        
-        #inputs tr {
-            height: 40px;
-            line-height: 40x;
-            display: none;
-        }
-        
-        #inputs tr input {
-            height: 40px;
-            line-height: 40x;
-            width: 100%;
-        }
-        
-        #outputs textarea {
-            width: 100%;
-            min-height: 200px;
-        }
-        /* Social Icons */
-        
-        .fa-facebook-square {
-            color: #3b5997;
-        }
-        
-        .fa-facebook-square:hover {
-            color: #4b71bf;
-        }
-        
-        .fa-twitter-square {
-            color: #00acee;
-        }
-        
-        .fa-twitter-square:hover {
-            color: #40caff;
-        }
-        
-        .fa-tumblr-square {
-            color: #36465d;
-        }
-        
-        .fa-tumblr-square:hover {
-            color: #4f6687;
-        }
-        
-        .fa-square-envelope {
-            color: #ffc300;
-        }
-        
-        .fa-square-envelope:hover {
-            color: #ffd652;
-        }
-        
-        .fa-pinterest-square {
-            color: #ce272f;
-        }
-        
-        .fa-pinterest-square:hover {
-            color: #ce545a;
-        }
-        
-        .fa-linkedin {
-            color: #037bb7;
-        }
-        
-        .fa-linkedin:hover {
-            color: #2b88b7;
-        }
-        
-        .fa-reddit-square {
-            color: #ff4500;
-        }
-        
-        .fa-reddit-square:hover {
-            color: #ff6a32;
-        }
-        
-        .fa-xing-square {
-            color: #185b64;
-        }
-        
-        .fa-xing-square:hover {
-            color: #299baa;
-        }
-        
-        .fa-whatsapp-square {
-            color: #13ae0a;
-        }
-        
-        .fa-whatsapp-square:hover {
-            color: #65ae61;
-        }
-        
-        .fa-hacker-news-square {
-            color: #ff6600;
-        }
-        
-        .fa-hacker-news-square:hover {
-            color: #ff954f;
-        }
+/* 
+/==========================
+💬 Comentários ao código 
+👉 🇧🇷 Versão em Português
+==========================/ 
+
+Este arquivo de extensão .css é o arquivo de estilos que incluimos
+no arquivo index.html e que possui as características que os elementos
+da nossa página devem ter. Usando o CSS podemos definir aspectos visuais 
+dos elementos da página conferindo um visual mais sofisticado e moderno
+às porções do código.
+
+O CSS "puro" segue no geral a seguinte anotação:
+
+Para elementos de tags, como <p>, <img>, <h1>, etc.:
+    elemento {
+        propriedade1: valor1,
+        propriedade2: valor2
+    }
+
+Para classes, como <img class="imagem-comclasse-exemplo" />, há um "ponto" antes do elemento:
+    .imagem-comclasse-exemplo{
+        propriedade1: valor1,
+        propriedade2: valor2
+    }
+
+Para elementos identificados com um atributo "id", como <img id="imagem-especifica">, há um "#" antes:
+    #imagem-especifica{
+        propriedade1: valor1,
+        propriedade2: valor2
+    }
+
+Você ainda pode especificar no seu código elementos específicos dependendo
+ da "árvore" definida no HTML. Por exemplo, imagine o seguinte código HTML:
+
+<div class="camada1">
+    <a href="algum_lugar" class="link">Link dentro</a>
+</div>
+<a href="outro_lugar" class="link">Link fora</a>
+
+E temos um CSS que se aplica a esse HTML, que contém uma indicação de que 
+temos um elemento "a" com a classe "link":
+
+a.link{ 
+    color: red;
+}
+
+Neste caso, tanto os links de "Link dentro" como de "Link fora" ficarão 
+com a cor vermelha. Se, ao contrário, definirmos o estilo da class .link 
+dentro do escopo da camada1, teremos apenas o "Link dentro" colorido:
+
+.camada1 a.link{ 
+    color: green;
+}
+
+Veja aqui o exemplo no codepen: https://codepen.io/devlawyer/pen/eYEbZgj
+
+/==========================
+💬 Comments to the code 
+👉 🇺🇸 English Version
+==========================/ 
+
+This .css file is the style file we include in our index.html and it has the 
+characteristics that the elements of our page must have. Using CSS we can 
+define visual aspects of the page elements giving a more sophisticated and modern look
+to portions of the code.
+
+"Pure" CSS generally follows the following annotation:
+
+For tag elements such as <p>, <img>, <h1>, etc.:
+    element {
+        property1: value1,
+        property2: value2
+    }
+
+For classes such as <img class="image-with-example-class" />, there is a "dot" 
+before the element:
+    .image-with-example-class{
+        property1: value1,
+        property2: value2
+    }
+
+For elements identified with an "id" attribute, such as <img id="image-specific">, 
+there is a "#" before:
+    #image-specific{
+        property1: value1,
+        property2: value2
+    }
+
+You can even specify specific elements in your code depending on the "tree"
+defined in HTML. For example, imagine the following HTML code:
+
+<div class="layer1">
+    <a href="some_place" class="link">Link inside</a>
+</div>
+<a href="elsewhere" class="link">Link outside</a>
+
+And we have a CSS that applies to that HTML, which contains an indication 
+that we have an "a" element with the "link" class:
+
+a.link{
+    color: red;
+}
+
+In this case, both the "Link inside" and "Link outside" links will be colored red. 
+If, on the contrary, we define the style of the .link class within the layer1 scope, 
+we'll just have the "Link inside" colored:
+
+.layer1 a.link{
+    color: green;
+}
+
+Here's the codepen example: https://codepen.io/devlawyer/pen/eYEbZgj
+
+*/
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    height: 80px;
+    line-height: 80px;
+    background-color: #333333;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+main {
+    min-height: calc(100% - 120px);
+}
+
+main section {
+    padding: 8px;
+}
+
+#socials button {
+    border: 0;
+    background: 0;
+    font-size: 6em;
+    cursor: pointer;
+}
+
+#socials .selected {
+    border: 5px dashed #FFC300;
+    border-radius: 6px;
+    background-color: #FFF3CD;
+}
+
+main section #copybtn,
+main section #refreshbtn {
+    font-size: 1.5em;
+    width: 100%;
+    color: #FFFFFF;
+    background: green;
+    border: 1px solid green;
+    padding: 6px;
+}
+
+main section #copybtn i,
+main section #refreshbtn i {
+    margin-right: 5px;
+}
+
+footer {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #333333;
+    text-align: end;
+}
+
+footer i {
+    margin-right: 6px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #FFC300;
+}
+
+footer a:hover,
+footer a:visited {
+    text-decoration: none;
+    color: #FFC300;
+}
+
+#socials h1,
+#inputs h1,
+#outputs h1 {
+    padding: 8px;
+    width: calc(100% - 16px);
+    background-color: #333333;
+    color: #FFC300;
+}
+
+#inputs table {
+    width: 100%;
+}
+
+#inputs tr {
+    height: 40px;
+    line-height: 40x;
+    display: none;
+}
+
+#inputs tr input {
+    height: 40px;
+    line-height: 40x;
+    width: 100%;
+}
+
+#outputs textarea {
+    width: 100%;
+    min-height: 200px;
+}
+
+
+/* Social Icons */
+
+.fa-facebook-square {
+    color: #3b5997;
+}
+
+.fa-facebook-square:hover {
+    color: #4b71bf;
+}
+
+.fa-twitter-square {
+    color: #00acee;
+}
+
+.fa-twitter-square:hover {
+    color: #40caff;
+}
+
+.fa-tumblr-square {
+    color: #36465d;
+}
+
+.fa-tumblr-square:hover {
+    color: #4f6687;
+}
+
+.fa-square-envelope {
+    color: #ffc300;
+}
+
+.fa-square-envelope:hover {
+    color: #ffd652;
+}
+
+.fa-pinterest-square {
+    color: #ce272f;
+}
+
+.fa-pinterest-square:hover {
+    color: #ce545a;
+}
+
+.fa-linkedin {
+    color: #037bb7;
+}
+
+.fa-linkedin:hover {
+    color: #2b88b7;
+}
+
+.fa-reddit-square {
+    color: #ff4500;
+}
+
+.fa-reddit-square:hover {
+    color: #ff6a32;
+}
+
+.fa-xing-square {
+    color: #185b64;
+}
+
+.fa-xing-square:hover {
+    color: #299baa;
+}
+
+.fa-whatsapp-square {
+    color: #13ae0a;
+}
+
+.fa-whatsapp-square:hover {
+    color: #65ae61;
+}
+
+.fa-hacker-news-square {
+    color: #ff6600;
+}
+
+.fa-hacker-news-square:hover {
+    color: #ff954f;
+}

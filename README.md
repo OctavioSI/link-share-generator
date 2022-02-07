@@ -24,7 +24,7 @@ They are not related to the Social Links Share Generator but we did use them as 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## Thanks to
-@markidenic for putting together this nice list at https://gist.github.com/markodenic/592f4196623690caf83379f2b33a4c9f
+[@markodenic](https://github.com/markodenic) for putting together this nice list at https://gist.github.com/markodenic/592f4196623690caf83379f2b33a4c9f
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
